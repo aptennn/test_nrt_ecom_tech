@@ -205,3 +205,34 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# для проекта
+
+
+data/
+*.parquet
+*.csv
+*.db
+
+minio_data/
+docker/volumes/minio/  # если храните volume отдельно
+
+*.jar
+!jars/  # исключаем папку jars, но можно оставить пустую для структуры
+jars/*.jar
+
+.dockerignore
+docker-compose.override.yml
+Dockerfile.dockerignore
+
+logs/
+*.log
+
+.idea/
+.vscode/
+*.iml
+
+
+.DS_Store
+Thumbs.db
+desktop.ini
