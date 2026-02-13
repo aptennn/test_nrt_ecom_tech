@@ -26,6 +26,7 @@
 Переходим в бакет data-bucket в папке result.parquet и будет результат.
 
 ### Локально
+так в docker образе ApacheSpark поставляется версию python 3.9, то для запуска локально рекомендуется python3.9 (или же убрать в requirements.txt требования версий библиотек) 
 устанавливаем все нужные библиотеки `pip install -r requirements.txt`
 
 
