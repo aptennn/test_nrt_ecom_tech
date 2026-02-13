@@ -4,6 +4,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, year, sum, rank
 from pyspark.sql.window import Window
 from config import Config
+import config
 
 logging.basicConfig(
     level=logging.INFO,
@@ -20,7 +21,7 @@ def create_spark_session():
                 "org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.262") \
         .master("local[*]")
 
-    if not Config.LOCAL_MODE:
+    if not config.LOCAL_MODE:
         spark_builder = spark_builder \
             .config("spark.hadoop.fs.s3a.endpoint", Config.S3_ENDPOINT) \
             .config("spark.hadoop.fs.s3a.access.key", Config.S3_ACCESS_KEY) \
@@ -88,7 +89,7 @@ def main():
 
 
     except Exception as e:
-        print(f"Ошибка в ETL процессе: {str(e)}", exc_info=True)
+        print(f"Ошибка в ETL процессе: {str(e)}")
         raise
 
 
