@@ -26,7 +26,7 @@
 Переходим в бакет data-bucket в папке result.parquet и будет результат.
 
 ### Локально
-устанавливаем все нужные библиотеки 'pip install -r requirements.txt'
+устанавливаем все нужные библиотеки `pip install -r requirements.txt`
 
 
 в `config.py` меняем переменную `LOCAL_MODE = True`
