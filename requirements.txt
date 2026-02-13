@@ -1,0 +1,5 @@
+pyspark==3.5.0
+pandas==2.0.3
+pyarrow==23.0.0
+minio==7.1.15
+pandas
