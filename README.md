@@ -31,7 +31,7 @@
 
 устанавливаем все нужные библиотеки `pip install -r requirements.txt`
 
-
+1
 в `config.py` меняем переменную `LOCAL_MODE = True`
 
 чтобы сгенерировать данные запускаем `data_generator.py`
